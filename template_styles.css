@@ -1,4 +1,4 @@
-@font-face {
+`@font-face {
   font-family: NeueHaas_reg;
   src: url(fonts/NeueHaasUnicaW1G-Regular.ttf);
   font-weight: normal; }
@@ -881,7 +881,7 @@ table {
 
 .b-your-blue__info {
   border-right: 1px solid #b2cefe;
-  padding-left: 50px !important; }
+  padding-left: 30px !important; }
 
 .b-your-blue__info:last-child {
   border-right: none; }
@@ -1916,7 +1916,7 @@ table {
   padding: 0; }
   .table tr:nth-child(n+2) {
     border-bottom: 1px solid #ededed;
-    cursor: pointer; }
+    }
     .table tr:nth-child(n+2):hover, .table tr:nth-child(n+2):focus {
       background: #ddebfe; }
       .table tr:nth-child(n+2):hover td, .table tr:nth-child(n+2):focus td {
@@ -2457,26 +2457,16 @@ table {
         .b-head__lang-list li:hover, .b-head__lang-list li:focus, .b-head__lang-list li.active {
           background: #f4f4f4; }
   .b-head__messages {
-    margin: 8px 17px 0 45px;
+    display: block;
     float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
+    background: #720229;
+    text-decoration: none;
+    margin: 8px 17px 0 45px;
     position: relative; }
-    .b-head__messages-link {
-      display: block;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
-      background: #720229;
-      text-decoration: none;
-      position: relative; }
-      .b-head__messages-link::before {
-        content: '';
-        position: absolute;
-        top: 9px;
-        left: 10px;
-        width: 20px;
-        height: 22px;
-        background: url("images/bell.png") no-repeat 0 0; }
     .b-head__messages-number {
       font-family: NeueHaas_medium, Helvetica, sans-serif;
       font-size: 14px;
@@ -2496,38 +2486,14 @@ table {
       top: -2px;
       right: -4px;
       padding-left: 5px; }
-    .b-head__messages-list {
-      display: none;
+    .b-head__messages::before {
+      content: '';
       position: absolute;
-      top: 43px;
-      right: 0;
-      z-index: 999;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      width: 290px;
-      border: 1px solid #8b0333;
-      background: #fff;
-      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
-      line-height: 0; }
-      .b-head__messages-list li a {
-        display: block;
-        margin: 0;
-        padding: 10px;
-        font-family: NeueHaas_reg, Helvetica, sans-serif;
-        font-size: 14px;
-        line-height: 1.2em;
-        font-weight: 400;
-        color: #000;
-        text-transform: none;
-        text-decoration: none;
-        letter-spacing: 0; }
-        .b-head__messages-list li a b {
-          font-family: NeueHaas_medium, Helvetica, sans-serif;
-          font-weight: 400; }
-        .b-head__messages-list li a:hover, .b-head__messages-list li a:focus {
-          background: #f4f4f4; }
+      top: 9px;
+      left: 10px;
+      width: 20px;
+      height: 22px;
+      background: url("images/bell.png") no-repeat 0 0; }
   .b-head__user {
     display: block;
     float: left;
@@ -2713,8 +2679,8 @@ table {
     letter-spacing: 0; }
   .application-window__left {
     float: left;
-    width: 400px;
-    margin: 0 132px 0 34px; }
+    width: 430px;
+    margin: 0 100px 0 34px; }
   .application-window__right {
     float: left;
     width: 200px;
@@ -2921,14 +2887,16 @@ table {
         top: 13px;
         right: 8px; }
     .b-ad-order-block__options-text {
-      margin: 6px 0 0 36px;
-      display: inline-block;
+      /*margin: 6px 0 0 36px;*/
+      /*display: inline-block;*/
       vertical-align: top;
       color: #a8a8a8;
+      font-size: 12px;
       white-space: nowrap;
-      position: absolute;
+      /*position: absolute;*/
       top: 0;
-      right: -431px; }
+      /*right: -431px; */
+    }
     .b-ad-order-block__options-cost {
       background: #f4f4f4;
       margin: 22px 0 20px 2px;
@@ -3340,6 +3308,14 @@ table {
         width: 21px;
         height: 14px;
         background: url("images/shipping-icon.png") no-repeat 0 0; }
+	.b-ad-unit-block__respond-price{
+    font-size: 14px;
+    min-height: 15px;
+}	
+	.b-ad-unit-block__respond-price span{
+    font-size: 15px;
+	color:#0c4da2;
+}	
   .b-ad-unit-block__respond-buttons {
     margin: 0 0 5px 0;
     font-size: 11px;
@@ -3384,12 +3360,12 @@ table {
   .b-ad-unit-block__respond-name {
     display: inline-block;
     vertical-align: top;
-    margin: 4px 31px 19px 0;
+	width: 186px;
     font-family: NeueHaas_light, Helvetica, sans-serif; }
   .b-ad-unit-block__respond-status {
-    display: inline-block;
+    float:right;
     vertical-align: top;
-    margin: 7px 0 0;
+    margin: 0 7px 0;
     color: #959595; }
   .b-ad-unit-block__respond-time {
     display: inline-block;
@@ -3721,7 +3697,7 @@ table {
       clear: both;
       border: 1px solid #d7d7d7;
       width: 248px;
-      height: 157px;
+	  padding: 0 0 10px;
       margin: 0 0 0 17px; }
       .b-auction-public-block__purchase-info-item {
         margin: 12px 0 0 10px;
@@ -3772,7 +3748,7 @@ table {
       text-transform: none;
       text-decoration: none;
       letter-spacing: 0;
-      margin: 0 0 53px 17px; }
+      margin: 0 0 10px 17px; }
     .b-auction-public-block__purchase-make-offer {
       margin: 0 36px 205px 0;
       font-size: 0;
@@ -3952,6 +3928,9 @@ table {
       line-height: 1.2em;
       font-weight: 400;
       color: #8b0333;
+	  width: 23px;
+	  padding: 2px 0 0;
+	  text-align: center;
       text-transform: none;
       text-decoration: none;
       letter-spacing: 0;
@@ -5381,7 +5360,7 @@ table {
     text-decoration: none;
     letter-spacing: 0;
     text-align: center;
-    margin: 0 0 42px; }
+    margin:0 70px 42px }
   .b-feedback-block__box-list {
     float: left;
     margin: 0 0 12px;
@@ -6189,7 +6168,7 @@ table {
       width: 248px; }
   .b-offers-request-block__translation {
     background: #f3f3f3;
-    margin: 0 18px 31px 3px;
+    /*margin: 0 18px 31px 3px;*/
     padding: 0 0 3px; }
     .b-offers-request-block__translation-title {
       font-family: NeueHaas_medium, Helvetica, sans-serif;
@@ -6198,7 +6177,7 @@ table {
       margin: 0 0 16px; }
     .b-offers-request-block__translation label {
       display: block;
-      margin: 0 0 13px 14px;
+      margin: 0 0 13px 0;
       padding: 0 0 0 23px; }
       .b-offers-request-block__translation label::before {
         top: 2px; }
@@ -8602,7 +8581,33 @@ table {
       border: none;
       width: 170px;
       text-align: left; }
-
+	.b-orders-list-block__features
+	{
+		position:relative;
+	}
+	.b-orders-list-block__features img
+	{
+		cursor:pointer;
+	}
+	.b-orders-list-block__features ul
+	{	
+		display:none;
+		position:absolute;
+		background: #fff;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+		top:0;
+		width: 150px;
+		right: 27px;
+		padding: 10px 28px;
+	}
+	.b-orders-list-block__features ul a
+	{
+		color:#000;
+	}
+	.b-orders-list-block__features ul a:hover
+	{
+		color:#a62150;
+	}
 /*end of b-orders-list-block*/
 /*b-orders-list-story-block*/
 .b-orders-list-story-block {
@@ -9301,6 +9306,31 @@ table {
         text-transform: none;
         text-decoration: none;
         letter-spacing: 0; }
+      .b-cabinet-block__general-info-deals-announce-and-purchases table{
+            width: 100%;}
+      .b-cabinet-block__general-info-deals-announce-and-purchases td {
+        padding: 8px 5px;
+        box-sizing: border-box;
+        border: none;
+        font-family: NeueHaas_light, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: #464646;
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0; }
+      .b-cabinet-block__general-info-deals-announce-and-purchases table tr td:first-child{
+        width:300px;}
+      .b-cabinet-block__general-info-deals-announce-and-purchases table tr td:first-child span{
+        display: block;
+		font-family: NeueHaas_light, Helvetica, sans-serif;
+		font-size: 10px;
+		line-height: 1.2em;
+		font-weight: 400;
+		color: #3577d7;}
+      .b-cabinet-block__general-info-deals-announce-and-purchases table tr td a{
+        color: #464646;;}
       .b-cabinet-block__general-info-deals-purchases-td {
         padding: 8px 5px;
         box-sizing: border-box;
@@ -12952,11 +12982,16 @@ div.search-item h4 a {
         vertical-align: top;
         width: 170px;
         padding: 0 25px 0 0; }
-        .open-shop__info td.logo img {
-          margin: 0 0 10px;
-          display: block;
+		.open-shop__logo_container
+		{
           width: 145px;
-          line-height: 0; }
+		  max-height:153px;
+		  text-align:center;
+		  border:1px solid #f6f6f6;
+		  margin:0 0 8px;
+		}
+        .open-shop__info td.logo img {
+         }
         .open-shop__info td.logo input {
           display: none; }
         .open-shop__info td.logo label {
@@ -15322,3 +15357,20 @@ div.search-item h4 a {
 
 /*end of vacancy*/
 /*end of PAGE-STYLES*/
+.d-block {display: block;}
+.bx-authform-edit
+{
+	width:274px;
+	padding:20px 30px;
+	background:#f4f4f4;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25)
+}
+.bx-authform-edit .bx-authform-formgroup-container
+{
+	margin: 0 0 6px;
+}
+.bx-authform-edit .bx-authform-link-container
+{
+	color:#7f7f7f;
+	font-size: 12px;
+}
