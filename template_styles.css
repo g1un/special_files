@@ -360,8 +360,6 @@ The `sprites` mixin generates identical output to the CSS template
 /*coaching*/
 .coaching { text-align: center; }
 
-.coaching .fon {background: rgba(106, 220, 144, 0.3); padding: 20px;}
-
 .coaching .container { padding: 45px 0 60px; }
 
 .coaching .more-link { float: right; margin: 0 80px 0 0; }
@@ -372,13 +370,15 @@ The `sprites` mixin generates identical output to the CSS template
 
 .coaching h4 { margin: 0 80px 25px; font-family: Roboto-Bold, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #000; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
 
-.coaching p { margin: 0 80px 8px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #000; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
-
 .coaching ul { margin: 0 80px; }
 
 .coaching ul li { margin: 0 0 20px; padding: 0 0 0 30px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #000; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; position: relative; }
 
 .coaching ul li::before { content: ''; position: absolute; top: 5px; left: -5px; width: 11px; height: 11px; border-right: 4px solid #4fc754; border-bottom: 4px solid #4fc754; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.coaching p { margin: 0 80px 8px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #000; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
+
+.coaching .fon { background: rgba(106, 220, 144, 0.3); padding: 20px; }
 
 /*end of coaching*/
 /*feedback*/
@@ -646,7 +646,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .coaching-page__info p a { font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: underline; letter-spacing: 0; text-align: left; }
 
-.coaching-page__info p.fon {background: rgba(106, 220, 144, 0.3); padding: 20px;}
+.coaching-page__info p.fon { background: rgba(106, 220, 144, 0.3); padding: 20px; }
 
 .coaching-page__info ul { margin: 0 0 50px; }
 
@@ -821,6 +821,10 @@ The `sprites` mixin generates identical output to the CSS template
 .trainings-unit__header ul li .text p { padding: 20px; box-sizing: border-box; width: 750px; background: #283e77; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 21px; line-height: 1.2em; font-weight: 400; color: #fff; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
 
 .trainings-unit__header ul li .text a { display: block; position: absolute; bottom: 0; right: 0; }
+
+.trainings-unit__program .container { padding: 40px 80px; box-sizing: border-box; background: #4cb050; }
+
+.trainings-unit__program p, .trainings-unit__program ul li { margin: 15px 0; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #fff; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
 
 .trainings-unit__trainer .container { padding: 40px 80px 40px; box-sizing: border-box; background: #519dcf; }
 
@@ -1000,45 +1004,43 @@ The `sprites` mixin generates identical output to the CSS template
 
 .business-cases-unit__nav li:last-child { clear: both; }
 
-.business-cases-unit__content { margin: 0 0 0px; }
+.business-cases-unit__content { margin: 0; }
+
+.business-cases-unit__content > li { padding: 30px 50px; }
 
 .business-cases-unit__content > li::after { content: ''; display: table; clear: both; }
 
+.business-cases-unit__content > li.fon { background: url(images/gray-fon-50.png) repeat; }
+
 .business-cases-unit__content h3 { margin: 30px 0 20px; }
 
-.business-cases-unit__content-img { float: right; width: 600px; margin-left: 10px;}
+.business-cases-unit__content-img { margin-left: 10px; float: right; width: 600px; }
 
-.business-cases-unit__content-img img { max-width: 100%; vertical-align: bottom;}
+.business-cases-unit__content-img img { vertical-align: bottom; max-width: 100%; }
 
 .business-cases-unit__content p { margin: 0 0 20px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
 
 .business-cases-unit__content p a { color: #616161; text-decoration: underline; }
+
 .business-cases-unit__content p a:hover { color: #616161; text-decoration: none; }
 
-/*
-.business-cases-unit__content ul li { margin: 0 0 10px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
-*/
-/*-------------------list arrow---------------------*/
 .business-cases-unit__content ul { margin: 0 0 50px; }
 
-.business-cases-unit__content ul li { padding: 0 0 0 35px; position: relative; margin: 0 0 25px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
-.business-cases-unit__content li.fon {
-	background: url(images/gray-fon-50.png) repeat;
-}
-.business-cases-unit__content li {padding: 30px 50px;}
+.business-cases-unit__content ul li { margin: 0 0 25px; padding: 0 0 0 35px; position: relative; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
+
+.business-cases-unit__content ul li a:link, .business-cases-unit__content ul li a:visited { color: #616161; text-decoration: underline; }
+
+.business-cases-unit__content ul li a:hover { color: #616161; text-decoration: none; }
+
 .business-cases-unit__content ul li::before { content: ''; position: absolute; top: 0; left: 0; background-image: url(images/sprite.png); background-position: -386px -289px; width: 15px; height: 23px; }
-/*-----------------/list arrow---------------------*/
 
-.business-cases-unit__content ul li a:link,
-.business-cases-unit__content ul li a:visited { color: #616161; text-decoration: underline; }
-.business-cases-unit__content ul li a:hover{ color: #616161; text-decoration: none; }
+.business-cases-unit__footer { padding: 5% 25%; clear: both; background: url(images/arrow.png) no-repeat bottom right, #4cb050 url(images/arrow.png) no-repeat bottom left; }
 
-.business-cases-unit__footer { clear: both; background: url(images/arrow.png) no-repeat bottom right, #4cb050 url(images/arrow.png) no-repeat bottom left; padding: 5% 25%;}
-
-.business-cases-unit__footer p { margin: 0 0 10px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; text-align: center; color: #ffffff;}
+.business-cases-unit__footer p { margin: 0 0 10px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #fff; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: center; }
 
 .business-cases-unit__footer p a { color: #616161; text-decoration: underline; }
-.business-cases-unit__footer p a:hover{ color: #616161; text-decoration: none; }
+
+.business-cases-unit__footer p a:hover { color: #616161; text-decoration: none; }
 
 .business-cases-unit__footer h3 { margin: 0 0 20px; font-family: Roboto-Bold, Helvetica, sans-serif; font-size: 36px; line-height: 1.5em; font-weight: 400; color: #212e50; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: center; }
 
@@ -1072,20 +1074,18 @@ The `sprites` mixin generates identical output to the CSS template
 
 .assessment p { margin: 0 0 20px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
 
-.assessment .fon {background: rgba(106, 220, 144, 0.3); padding: 20px;}
+.assessment p a { font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #fff; text-transform: none; text-decoration: underline; letter-spacing: 0; text-align: left; }
 
-.assessment p a { font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #ffffff; text-transform: none; text-decoration: underline; letter-spacing: 0; text-align: left; }
+.assessment ul { margin: 0 0 50px; }
 
-.assessment ul { margin: 0 0 20px; }
+.assessment ul li { margin: 0 0 25px; padding: 0 0 0 35px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; position: relative; }
 
-.assessment ul li { margin: 0 0 10px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
+.assessment ul li::before { content: ''; position: absolute; top: 0; left: 0; background-image: url(images/sprite.png); background-position: -386px -289px; width: 15px; height: 23px; }
 
 .assessment ul li a { font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: underline; letter-spacing: 0; text-align: left; }
-.assessment ul li a:hover { font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.5em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
-.assessment  ul { margin: 0 0 50px; }
 
-.assessment  ul li { padding: 0 0 0 35px; position: relative; margin: 0 0 25px; font-family: Roboto-Regular, Helvetica, sans-serif; font-size: 18px; line-height: 1.2em; font-weight: 400; color: #616161; text-transform: none; text-decoration: none; letter-spacing: 0; text-align: left; }
+.assessment ul li a:hover { color: #616161; text-decoration: none; }
 
-.assessment  ul li::before { content: ''; position: absolute; top: 0; left: 0; background-image: url(images/sprite.png); background-position: -386px -289px; width: 15px; height: 23px; }
+.assessment .fon { padding: 20px; background: rgba(106, 220, 144, 0.3); }
 
 /*end of assessment*/
