@@ -55,8 +55,8 @@ html, body {
   scrollbar-dark-shadow-color: #fff; }
 
 body {
-  min-width: 720px;
-  max-width: 1024px;
+/*  min-width: 720px;
+  max-width: 1024px;*/
   margin: 0 auto;
   padding: 0;
   position: relative; }
@@ -994,7 +994,7 @@ ul, p, h1, h2, h3 {
   padding-top: 20px;
   padding-left: 38px;
   padding-bottom: 22px;
-  border-bottom: 3px solid #E5E4E4;
+  border-bottom: 1px solid #E5E4E4;
   position: relative; }
   .tasks__title-text {
     font-family: "Roboto";
@@ -1030,7 +1030,7 @@ ul, p, h1, h2, h3 {
   padding-left: 33px;
   padding-bottom: 10px;
   text-decoration: none;
-  border-bottom: 3px solid #E5E4E4; }
+  border-bottom: 1px solid #E5E4E4; }
   .tasks__item:last-child {
     border-bottom: none; }
   .tasks__item-cost {
@@ -1073,13 +1073,13 @@ ul, p, h1, h2, h3 {
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0; }
-    .tasks__item-date--time {
+    .tasks__item-date[data-behavior="timer"] {
       margin-top: 9px;
       margin-left: 0;
       margin-bottom: 11px;
       padding-left: 47px;
       position: relative; }
-      .tasks__item-date--time::before {
+      .tasks__item-date[data-behavior="timer"]::before {
         content: '';
         position: absolute;
         top: -2px;
@@ -1387,7 +1387,7 @@ ul, p, h1, h2, h3 {
   .side-menu__footer {
     background: #f4bc32;
     padding-top: 5px;
-    padding-bottom: 33px; }
+    padding-bottom: 18px; }
     .side-menu__footer-icon {
       float: right;
       margin-top: 27px;
@@ -1418,53 +1418,54 @@ ul, p, h1, h2, h3 {
         height: 23px;
         background: url("../img/arrow-left-icon.svg") no-repeat 0 0; }
     .side-menu__footer-photo {
-      width: 126px;
-      height: 126px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
-      margin-left: 29px;
-      margin-bottom: 32px; }
+      margin-left: 14px;
+      margin-bottom: 16px; 
+      overflow: hidden;
+    }
       .side-menu__footer-photo img {
         max-width: 100%; }
     .side-menu__footer-user-name {
       font-family: "Roboto";
-      font-size: 30px;
+      font-size: 20px;
       line-height: 1.2em;
       font-weight: 400;
       color: #aa832e;
       text-transform: none;
       text-decoration: none;
       letter-spacing: 0;
-      margin-left: 35px; }
+      margin-left: 20px; }
   .side-menu__list {
     background: #fff; }
     .side-menu__list-link {
       display: block;
       font-family: "Open Sans Reg";
-      font-size: 35px;
+      font-size: 18px;
       line-height: 1.14286em;
       font-weight: 400;
       color: #000;
       text-transform: none;
       text-decoration: none;
       letter-spacing: 0;
-      padding: 39px 0 31px 108px;
+      padding: 20px 0 15px 54px;
       position: relative; }
       .side-menu__list-link:hover, .side-menu__list-link:focus {
         background: #f2f2f2; }
       .side-menu__list-link-number {
         display: block;
         float: right;
-        margin-top: 7px;
         margin-right: 43px;
-        padding-top: 6px;
-        width: 38px;
-        height: 38px;
+        padding-top: 5px;
+        width: 28px;
+        height: 28px;
         box-sizing: border-box;
         background: #f4bc32;
         text-align: center;
         border-radius: 50%;
         font-family: "Open Sans Sb";
-        font-size: 22px;
+        font-size: 15px;
         line-height: 1.09091em;
         font-weight: 400;
         color: #000;
@@ -1474,51 +1475,69 @@ ul, p, h1, h2, h3 {
       .side-menu__list-link--notification:before {
         content: '';
         position: absolute;
-        top: 44px;
-        left: 39px;
+        top: 20px;
+        left: 20px;
         width: 29px;
         height: 33px;
-        background: url("../img/notification-icon.svg") no-repeat 0 0; }
+        background: url("../img/notification-icon.svg") no-repeat 0 0; 
+        -webkit-background-size: 60%;
+        background-size: 60%;
+      }
       .side-menu__list-link--all-tasks:before {
         content: '';
         position: absolute;
-        top: 48px;
-        left: 42px;
+        top: 20px;
+        left: 20px;
         width: 23px;
         height: 29px;
-        background: url("../img/all-tasks-icon--light.svg") no-repeat 0 0; }
+        background: url("../img/all-tasks-icon--light.svg") no-repeat 0 0; 
+        -webkit-background-size: 60%;
+        background-size: 60%;
+      }
       .side-menu__list-link--settings:before {
         content: '';
         position: absolute;
-        top: 44px;
-        left: 41px;
+        top: 20px;
+        left: 20px;
         width: 31px;
         height: 31px;
-        background: url("../img/settings-icon.svg") no-repeat 0 0; }
+        background: url("../img/settings-icon.svg") no-repeat 0 0; 
+        -webkit-background-size: 60%;
+        background-size: 60%;
+      }
       .side-menu__list-link--balance:before {
         content: '';
         position: absolute;
-        top: 48px;
-        left: 41px;
+        top: 20px;
+        left: 20px;
         width: 31px;
         height: 31px;
-        background: url("../img/balance-icon.svg") no-repeat 0 0; }
+        background: url("../img/balance-icon.svg") no-repeat 0 0; 
+        -webkit-background-size: 60%;
+        background-size: 60%;
+      }
       .side-menu__list-link--bookmarks:before {
         content: '';
         position: absolute;
-        top: 46px;
-        left: 45px;
+        top: 20px;
+        left: 20px;
         width: 22px;
         height: 29px;
-        background: url("../img/bookmarks-icon.svg") no-repeat 0 0; }
+        background: url("../img/bookmarks-icon.svg") no-repeat 0 0; 
+        -webkit-background-size: 60%;
+        background-size: 60%;
+      }
       .side-menu__list-link--exit:before {
         content: '';
         position: absolute;
-        top: 48px;
-        left: 43px;
+        top: 20px;
+        left: 20px;
         width: 29px;
         height: 29px;
-        background: url("../img/exit-icon.svg") no-repeat 0 0; }
+        background: url("../img/exit-icon.svg") no-repeat 0 0; 
+        -webkit-background-size: 60%;
+        background-size: 60%;
+      }
 
 .my-tasks__info {
   font-family: "Open Sans Reg";
