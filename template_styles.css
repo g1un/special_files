@@ -1989,13 +1989,15 @@ table {
       border: none; }
   .table-shop-goods td {
     vertical-align: middle;
+      font-family: NeueHaas_light, Helvetica, sans-serif;
+      font-size: 14px;
     height: 50px;
     padding: 5px 10px;
     box-sizing: border-box; }
     .table-shop-goods td:first-child {
       width: 200px; }
     .table-shop-goods td:nth-child(2) {
-      width: 140px;
+      width: 100px;
       font-family: NeueHaas_medium, Helvetica, sans-serif;
       font-size: 14px;
       line-height: 1.2em;
@@ -2015,7 +2017,7 @@ table {
       text-decoration: none;
       letter-spacing: 0; }
     .table-shop-goods td:nth-child(4) {
-      width: 130px;
+      width: 100px;
       font-family: NeueHaas_light, Helvetica, sans-serif;
       font-size: 14px;
       line-height: 1.2em;
@@ -2324,9 +2326,13 @@ table {
   width: 32px;
   height: 32px;
   z-index: 2;
-  background: url(images/eye_quick_view.png);
-  opacity: 0.3;
-  cursor: pointer; }
+  background-image: url(images/eye_quick_view.png);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    cursor: pointer;
+  }
   .js--input-eye--to-show-password:hover, .js--input-eye--to-show-password--active {
     opacity: 1; }
 
@@ -4915,14 +4921,17 @@ table {
         height: inherit;
         width: 0;
         background: #7fb3ff; }
+    .b-create-purchase-block__add-doc2 input,
     .b-create-purchase-block__add-doc input {
       display: none; }
+    .b-create-purchase-block__add-doc2 label,
     .b-create-purchase-block__add-doc label {
       display: block;
       float: right;
       margin: 9px 6px 0 0;
       padding: 9px 0;
       width: 248px; }
+  .b-create-purchase-block__doc2,
   .b-create-purchase-block__doc {
     display: inline-block;
     vertical-align: top;
@@ -6319,6 +6328,35 @@ table {
 
 /*end of b-offers-request-block*/
 /*b-post-ad-block*/
+#piar_select
+{
+	width:550px;
+	height:250px;
+}
+#piar_select h3
+{
+	margin: 20px 86px 20px 20px;
+}
+#piar_select .tarif-info
+{
+	padding:10px;
+	font-size:12px;
+}
+#piar_select .tarif-info div
+{
+	display:none;
+}
+#piar_select  table
+{
+	margin:10px 0;
+	width: 100%;
+    height: 115px;
+}
+#piar_select .jq-selectbox__dropdown,
+#piar_select .jq-selectbox-main .jq-selectbox__select
+{
+	width:230px;
+}
 .b-post-ad-block {
   clear: both;
   padding: 0 0 75px;
@@ -7562,7 +7600,7 @@ table {
   .b-stores-block__sort {
     background: #f4f4f4;
     margin: 0 0 26px;
-    padding: 0 0 22px 21px; }
+    padding:20px; }
     .b-stores-block__sort-type {
       margin: 0;
       padding: 17px 0 23px; }
@@ -12829,8 +12867,7 @@ div.search-item h4 a {
           margin: 0;
           padding: 0; }
           .shop__info table td ul li {
-            margin: 0 0 10px;
-            padding: 0 0 0 25px;
+            margin: 0 0 5px;
             font-family: NeueHaas_medium, Helvetica, sans-serif;
             font-size: 15px;
             line-height: 1.2em;
@@ -12980,7 +13017,7 @@ div.search-item h4 a {
         padding: 5px 10px;
         box-sizing: border-box; }
         .shop__goods table td:first-child {
-          width: 200px; }
+         /*  width: 200px;  */}
         .shop__goods table td:nth-child(2) {
           width: 140px;
           font-family: NeueHaas_medium, Helvetica, sans-serif;
@@ -13396,9 +13433,10 @@ div.search-item h4 a {
           text-transform: none;
           text-decoration: none;
           letter-spacing: 0; }
-    .open-shop .schedule .label-checkbox::before,
-    .open-shop .schedule .label-checkbox:checked + label::before,
-    .open-shop .schedule .label-checkbox:checked + label::after {
+    .schedule .label-checkbox::before,
+    .schedule .label-checkbox::after,
+    .schedule .label-checkbox:checked + label::before,
+    .schedule .label-checkbox:checked + label::after {
       margin: 5px; }
   .open-shop__goods {
     margin: 0; }
@@ -13415,16 +13453,16 @@ div.search-item h4 a {
       text-align: center; }
     .open-shop__goods table {
       margin: 0 0 20px; }
-      .open-shop__goods table .remove {
+      .table-shop-goods .remove {
         display: block;
-        float: right;
+		margin:0 auto;
         width: 19px;
         height: 19px;
         background: #8b0333;
         border-radius: 50%;
         cursor: pointer;
         position: relative; }
-        .open-shop__goods table .remove::before {
+        .table-shop-goods .remove::before {
           content: '';
           position: absolute;
           top: 8px;
@@ -13434,7 +13472,7 @@ div.search-item h4 a {
           background: #fff;
           -webkit-transform: rotate(45deg);
                   transform: rotate(45deg); }
-        .open-shop__goods table .remove::after {
+        .table-shop-goods .remove::after {
           content: '';
           position: absolute;
           top: 8px;
