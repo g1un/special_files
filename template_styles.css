@@ -1107,15 +1107,12 @@ table {
   vertical-align: top; }
 
 .b-purchase .b-deal .b-common-list-table td:first-child {
-  width: 204px;
   box-sizing: border-box; }
 
 .b-purchase .b-deal .b-common-list-table td:nth-child(2) {
-  width: 120px;
   box-sizing: border-box; }
 
 .b-purchase .b-deal .b-common-list-table td:nth-child(3) {
-  width: 102px;
   box-sizing: border-box; }
 
 .b-purchase .b-deal .b-common-list-table td:last-child {
@@ -1989,11 +1986,11 @@ table {
       border: none; }
   .table-shop-goods td {
     vertical-align: middle;
-      font-family: NeueHaas_light, Helvetica, sans-serif;
-      font-size: 14px;
     height: 50px;
     padding: 5px 10px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-family: NeueHaas_light, Helvetica, sans-serif;
+    font-size: 14px; }
     .table-shop-goods td:first-child {
       width: 200px; }
     .table-shop-goods td:nth-child(2) {
@@ -2053,6 +2050,35 @@ table {
       text-transform: none;
       text-decoration: none;
       letter-spacing: 0; }
+  .table-shop-goods .remove {
+    margin: 0 auto;
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: #8b0333;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative; }
+    .table-shop-goods .remove::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      width: 12px;
+      height: 3px;
+      background: #fff;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .table-shop-goods .remove::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      width: 12px;
+      height: 3px;
+      background: #fff;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
 
 /*end of table-shop-goods*/
 /*check-icon*/
@@ -2327,12 +2353,11 @@ table {
   height: 32px;
   z-index: 2;
   background-image: url(images/eye_quick_view.png);
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3;
-    cursor: pointer;
-  }
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  cursor: pointer; }
   .js--input-eye--to-show-password:hover, .js--input-eye--to-show-password--active {
     opacity: 1; }
 
@@ -2838,7 +2863,7 @@ table {
 /*b-about-portal-block*/
 .b-about-portal-block {
   clear: both;
-  padding: 1px 6px 7px 19px;
+  padding: 0 10px 5px;
   background: #fff;
   margin: 25px 0px 15px;
   border: 1px solid #ccc;
@@ -2857,19 +2882,18 @@ table {
     letter-spacing: 0;
     margin: 0 0 27px; }
   .b-about-portal-block__text {
+    margin: 0 0 35px;
+    padding: 5px;
     font-family: NeueHaas_reg, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.2em;
     font-weight: 400;
-    color: #898989;
+    color: #000;
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0;
-    margin: 0 0 37px;
     text-align: center;
-    border: 1px solid #efeeee;
-    width: 769px;
-    height: 206px; }
+    border: 1px solid #efeeee; }
   .b-about-portal-block__advantages {
     margin-bottom: 15px; }
     .b-about-portal-block__advantages-title {
@@ -3595,6 +3619,7 @@ table {
     .b-ad-unit-block__background.show {
       display: block; }
   .b-ad-unit-block__image {
+    padding: 78px 10px 10px;
     display: none;
     opacity: 0;
     max-width: 800px;
@@ -4184,31 +4209,11 @@ table {
     letter-spacing: 0;
     margin-bottom: 27px; }
   .b-bonus-block__button {
-    display: block;
-    width: 196px;
-    height: 23px;
-    padding: 7px 10px 0;
-    margin-left: 1px;
-    border-radius: 5px;
-    background: #6e9cde;
-    background: -webkit-linear-gradient(top, #8ec2ff, #6e9cde);
-    background: linear-gradient(to bottom, #8ec2ff, #6e9cde);
-    font-family: NeueHaas_medium, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 1.2em;
-    font-weight: 400;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0;
-    text-align: center;
-    margin-bottom: 31px; }
-    .b-bonus-block__button:hover, .b-bonus-block__button:focus {
-      background: #8ec2ff;
-      background: -webkit-linear-gradient(bottom, #8ec2ff, #6e9cde);
-      background: linear-gradient(to top, #8ec2ff, #6e9cde); }
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top; }
     .b-bonus-block__button span {
-      font-family: NeueHaas_bold, Helvetica, sans-serif; }
+      font-size: 12px; }
   .b-bonus-block__link {
     display: inline-block;
     font-family: NeueHaas_bold, Helvetica, sans-serif;
@@ -4352,10 +4357,11 @@ table {
       width: 304px;
       background: rgba(0, 0, 0, 0.61); }
     .b-contacts-block__map-list {
-      list-style: none;
-      margin: 0 0 14px;
-      padding: 0; }
+      margin: 0 0 15px;
+      padding: 0;
+      list-style: none; }
     .b-contacts-block__map-item {
+      padding: 15px 10px 15px 70px;
       border-bottom: 1px solid #333;
       position: relative; }
       .b-contacts-block__map-item-title {
@@ -4381,38 +4387,31 @@ table {
           color: #8dbbff; }
           .b-contacts-block__map-item-text a:hover, .b-contacts-block__map-item-text a:focus {
             text-decoration: none; }
-      .b-contacts-block__map-item--tel {
-        padding: 24px 10px 19px 70px; }
-        .b-contacts-block__map-item--tel::before {
-          content: '';
-          position: absolute;
-          top: 26px;
-          left: 15px;
-          width: 30px;
-          height: 30px;
-          background: url("images/b-contacts-block__map-item--tel.png") no-repeat 0 0; }
-      .b-contacts-block__map-item--address {
-        padding: 18px 10px 19px 70px; }
-        .b-contacts-block__map-item--address::before {
-          content: '';
-          position: absolute;
-          top: 26px;
-          left: 15px;
-          width: 30px;
-          height: 30px;
-          background: url("images/b-contacts-block__map-item--address.png") no-repeat 0 0; }
-      .b-contacts-block__map-item--mail {
-        padding: 12px 10px 15px 70px; }
-        .b-contacts-block__map-item--mail::before {
-          content: '';
-          position: absolute;
-          top: 26px;
-          left: 15px;
-          width: 30px;
-          height: 30px;
-          background: url("images/b-contacts-block__map-item--mail.png") no-repeat 0 0; }
+      .b-contacts-block__map-item--tel::before {
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        background: url("images/b-contacts-block__map-item--tel.png") no-repeat 0 0; }
+      .b-contacts-block__map-item--address::before {
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        background: url("images/b-contacts-block__map-item--address.png") no-repeat 0 0; }
+      .b-contacts-block__map-item--mail::before {
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        background: url("images/b-contacts-block__map-item--mail.png") no-repeat 0 0; }
       .b-contacts-block__map-item--schedule {
-        padding: 18px 10px 19px 70px;
         border-bottom: none; }
         .b-contacts-block__map-item--schedule::before {
           content: '';
@@ -4931,11 +4930,14 @@ table {
       margin: 9px 6px 0 0;
       padding: 9px 0;
       width: 248px; }
-  .b-create-purchase-block__doc2,
   .b-create-purchase-block__doc {
     display: inline-block;
     vertical-align: top;
     margin: 0 0 36px 3px; }
+    .b-create-purchase-block__doc2 {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 36px 3px; }
     .b-create-purchase-block__doc-block {
       width: 117px;
       height: 90px;
@@ -6328,35 +6330,6 @@ table {
 
 /*end of b-offers-request-block*/
 /*b-post-ad-block*/
-#piar_select
-{
-	width:550px;
-	height:250px;
-}
-#piar_select h3
-{
-	margin: 20px 86px 20px 20px;
-}
-#piar_select .tarif-info
-{
-	padding:10px;
-	font-size:12px;
-}
-#piar_select .tarif-info div
-{
-	display:none;
-}
-#piar_select  table
-{
-	margin:10px 0;
-	width: 100%;
-    height: 115px;
-}
-#piar_select .jq-selectbox__dropdown,
-#piar_select .jq-selectbox-main .jq-selectbox__select
-{
-	width:230px;
-}
 .b-post-ad-block {
   clear: both;
   padding: 0 0 75px;
@@ -7600,7 +7573,7 @@ table {
   .b-stores-block__sort {
     background: #f4f4f4;
     margin: 0 0 26px;
-    padding:20px; }
+    padding: 20px; }
     .b-stores-block__sort-type {
       margin: 0;
       padding: 17px 0 23px; }
@@ -7861,7 +7834,7 @@ table {
     .b-auction-public-block__bets--seller-in-purchase.b-auction-public-block__bets .b-auction-public-block__bets-table th:first-child {
       text-align: left; }
     .b-auction-public-block__bets--seller-in-purchase.b-auction-public-block__bets .b-auction-public-block__bets-table td:first-child {
-      width: 125px; }
+      width: 225px; }
     .b-auction-public-block__bets--seller-in-purchase.b-auction-public-block__bets .b-auction-public-block__bets-table td:nth-child(2) {
       width: 83px;
       background: none;
@@ -8009,6 +7982,17 @@ table {
               min-width: 73px;
               margin: 0 auto;
               padding: 8px 0;
+              background: #fff;
+              text-align: center; }
+          .b-auction-public-block__protocol-table-results tr.b-auction-public-block__protocol-table-results-winner td.result-price {
+            padding: 7px 0;
+            font-family: NeueHaas_bold, Helvetica, sans-serif;
+            color: #8b0333; }
+            .b-auction-public-block__protocol-table-results tr.b-auction-public-block__protocol-table-results-winner td.result-price span {
+              margin: 0 auto;
+              padding: 8px 0;
+              display: block;
+              min-width: 73px;
               background: #fff;
               text-align: center; }
     .b-auction-public-block__protocol-table-results th {
@@ -8535,6 +8519,7 @@ table {
     display: none;
     clear: both;
     margin: 0;
+    width: 100%;
     background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15); }
     .b-orders-list-block__table-favourite.show {
@@ -8581,6 +8566,7 @@ table {
         color: #464646; }
       .b-orders-list-block__table-favourite-td:last-child {
         padding: 0 5px;
+        box-sizing: border-box;
         border: none;
         width: 170px;
         text-align: left; }
@@ -8757,16 +8743,18 @@ table {
         text-align: left; }
     .b-orders-list-block--open-deals table .b-orders-list-block__table-favourite-td:first-child {
       padding-left: 15px;
-      width: 282px; }
+      width: 100%;
+      font-family: NeueHaas_medium, Helvetica, sans-serif;
+      color: #464646; }
     .b-orders-list-block--open-deals table .b-orders-list-block__table-favourite-td:nth-child(2) {
       padding-left: 15px;
-      font-family: NeueHaas_medium, Helvetica, sans-serif;
-      color: #464646;
-      width: auto; }
+      min-width: 250px;
+      font-family: NeueHaas_reg, Helvetica, sans-serif; }
     .b-orders-list-block--open-deals table .b-orders-list-block__table-favourite-td:last-child {
       padding: 0 5px;
+      box-sizing: border-box;
       border: none;
-      width: 170px;
+      min-width: 170px;
       text-align: left; }
     .b-orders-list-block--open-deals table.b-stores-block__table td:first-child {
       width: 30px; }
@@ -13016,8 +13004,6 @@ div.search-item h4 a {
         height: 50px;
         padding: 5px 10px;
         box-sizing: border-box; }
-        .shop__goods table td:first-child {
-         /*  width: 200px;  */}
         .shop__goods table td:nth-child(2) {
           width: 140px;
           font-family: NeueHaas_medium, Helvetica, sans-serif;
@@ -13433,11 +13419,6 @@ div.search-item h4 a {
           text-transform: none;
           text-decoration: none;
           letter-spacing: 0; }
-    .schedule .label-checkbox::before,
-    .schedule .label-checkbox::after,
-    .schedule .label-checkbox:checked + label::before,
-    .schedule .label-checkbox:checked + label::after {
-      margin: 5px; }
   .open-shop__goods {
     margin: 0; }
     .open-shop__goods h3 {
@@ -13453,35 +13434,6 @@ div.search-item h4 a {
       text-align: center; }
     .open-shop__goods table {
       margin: 0 0 20px; }
-      .table-shop-goods .remove {
-        display: block;
-		margin:0 auto;
-        width: 19px;
-        height: 19px;
-        background: #8b0333;
-        border-radius: 50%;
-        cursor: pointer;
-        position: relative; }
-        .table-shop-goods .remove::before {
-          content: '';
-          position: absolute;
-          top: 8px;
-          left: 3px;
-          width: 12px;
-          height: 3px;
-          background: #fff;
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg); }
-        .table-shop-goods .remove::after {
-          content: '';
-          position: absolute;
-          top: 8px;
-          left: 3px;
-          width: 12px;
-          height: 3px;
-          background: #fff;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
     .open-shop__goods .comment {
       display: table-cell;
       vertical-align: middle;
@@ -13572,6 +13524,11 @@ div.search-item h4 a {
     color: #c3c3c3; }
     .open-shop__chars-counter span {
       color: #3474d6; }
+
+.schedule .label-checkbox::before, .schedule .label-checkbox::after,
+.schedule .label-checkbox:checked + label::before,
+.schedule .label-checkbox:checked + label::after {
+  margin: 5px; }
 
 /*end of open-shop*/
 /*popup*/
@@ -15586,4 +15543,29 @@ div.search-item h4 a {
     font-size: 12px; }
 
 /*end of d-block*/
+/*piar_select*/
+#piar_select {
+  width: 550px;
+  height: 250px; }
+
+#piar_select h3 {
+  margin: 20px 86px 20px 20px; }
+
+#piar_select .tarif-info {
+  padding: 10px;
+  font-size: 12px; }
+
+#piar_select .tarif-info div {
+  display: none; }
+
+#piar_select table {
+  margin: 10px 0;
+  width: 100%;
+  height: 115px; }
+
+#piar_select .jq-selectbox__dropdown,
+#piar_select .jq-selectbox-main .jq-selectbox__select {
+  width: 230px; }
+
+/*end of piar_select*/
 /*end of PAGE-STYLES*/
