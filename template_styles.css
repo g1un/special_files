@@ -1032,7 +1032,6 @@ table {
   left: 110px; }
 
 .b-item-element__icon {
-  background: url(images/sale_gaika.png) center no-repeat;
   width: 22px;
   height: 22px;
   position: absolute; }
@@ -2607,8 +2606,8 @@ table {
         background: url("images/bell.png") no-repeat 0 0; }
     .b-head__messages-number {
       font-family: NeueHaas_medium, Helvetica, sans-serif;
-      font-size: 14px;
-      line-height: 1em;
+      font-size: 12px;
+      line-height: 1.3em;
       font-weight: 400;
       color: #464646;
       text-transform: uppercase;
@@ -2623,7 +2622,7 @@ table {
       position: absolute;
       top: -2px;
       right: -4px;
-      padding-left: 5px; }
+      text-align: center}
     .b-head__messages-list {
       display: none;
       position: absolute;
@@ -2654,6 +2653,9 @@ table {
         .b-head__messages-list li div b {
           font-family: NeueHaas_medium, Helvetica, sans-serif;
           font-weight: 400; }
+           .b-head__messages-list li div a {
+            color: #7fb3ff;
+           }
         .b-head__messages-list li div:hover, .b-head__messages-list li div:focus {
           background: #f4f4f4; }
   .b-head__user {
@@ -3270,10 +3272,10 @@ table {
           font-family: NeueHaas_medium, Helvetica, sans-serif;
           font-size: 18px;
           color: #8b0333; }
-      .b-ad-order-block__orders-info-submit {
+      .gray_btn_style {
         font-family: NeueHaas_medium, Helvetica, sans-serif;
         font-size: 12px;
-        line-height: 1.2em;
+        line-height: 2.8em;
         font-weight: 400;
         color: #464646;
         text-transform: uppercase;
@@ -3281,6 +3283,7 @@ table {
         letter-spacing: 0;
         float: right;
         display: block;
+		text-align:center;
         width: 153px;
         height: 32px;
         box-sizing: border-box;
@@ -3515,6 +3518,9 @@ table {
     display: inline-block;
     vertical-align: top;
     margin: 0 14px 11px 0; }
+    .b-ad-unit-block__respond-photo img {
+      border-radius: 50%;
+    }
     .b-ad-unit-block__respond-photo-name {
       font-family: NeueHaas_light, Helvetica, sans-serif; }
   .b-ad-unit-block__respond-name {
@@ -4049,6 +4055,7 @@ table {
       width: 57px;
       text-align: center; }
       .b-auction-public-block__buyer-photo img {
+        border-radius: 50%;
         max-width: 100%; }
     .b-auction-public-block__buyer-btn {
       display: block;
@@ -7836,8 +7843,8 @@ table {
     .b-auction-public-block__bets--seller-in-purchase.b-auction-public-block__bets .b-auction-public-block__bets-table td:first-child {
       width: 225px; }
     .b-auction-public-block__bets--seller-in-purchase.b-auction-public-block__bets .b-auction-public-block__bets-table td:nth-child(2) {
-      width: 83px;
-      background: none;
+      width: 50px;
+      /*background: none;*/
       font-family: NeueHaas_light, Helvetica, sans-serif;
       font-size: 12px;
       line-height: 1.2em;
@@ -10181,7 +10188,7 @@ table {
       .b-cabinet-block__finance-score-sum {
         float: left;
         margin: 0;
-        width: 179px; }
+        padding: 5px 7px 9px;}
       .b-cabinet-block__finance-score-add {
         float: right;
         margin: 0;
@@ -15568,4 +15575,74 @@ div.search-item h4 a {
   width: 230px; }
 
 /*end of piar_select*/
+.icon_navigatsiya_i_svyaz
+{
+	background: url(images/icon_leftmenu_1.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_avariyno_spasatelnye_sredstva
+{
+	background: url(images/icon_leftmenu_2.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_protivopozharnye_sredstva
+{
+	background: url(images/icon_leftmenu_3.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_sudovoe_oborudovanie
+{
+	background: url(images/icon_leftmenu_4.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_sudovaya_elektrika
+{
+	background: url(images/icon_leftmenu_5.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_korpus_i_paluba
+{
+	background: url(images/icon_leftmenu_6.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_sudovye_materialy
+{
+	background: url(images/icon_leftmenu_7.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_rybopromyslovoe_oborudovanie
+{
+	background: url(images/icon_leftmenu_8.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_gidrograficheskoe_oborudovanie
+{
+	background: url(images/icon_leftmenu_9.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_vodolaznoe_i_podvodnoe_oborudovanie
+{
+	background: url(images/icon_leftmenu_10.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_plavsredstva
+{
+	background: url(images/icon_leftmenu_11.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_uslugi_i_servis
+{
+	background: url(images/icon_leftmenu_12.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_suveniry_i_vintazh
+{
+	background: url(images/icon_leftmenu_13.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
+.icon_raznoe
+{
+	background: url(images/icon_leftmenu_14.png) 0px 0px no-repeat; 
+	background-size:cover;
+}
 /*end of PAGE-STYLES*/
