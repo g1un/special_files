@@ -990,8 +990,7 @@ table {
 
 .b-right-list {
   width: 180px;
-  float: right;
-  margin-top: -40px; }
+  float: right; }
 
 .b-right-list .add_adv {
   padding: 0; }
@@ -1032,6 +1031,7 @@ table {
   left: 110px; }
 
 .b-item-element__icon {
+  background: url(images/sale_gaika.png) center no-repeat;
   width: 22px;
   height: 22px;
   position: absolute; }
@@ -1072,32 +1072,6 @@ table {
 
 .font_size_13 {
   font-size: 13px; }
-
-.b-deal {
-  float: left;
-  margin-bottom: 10px; }
-
-.b-deal .pagination {
-  margin: 10px 6px 0 0; }
-
-.b-deal-list {
-  width: 620px; }
-
-.b-deal-list__item {
-  width: 620px;
-  background: #e8f1ff;
-  font-size: 13px;
-  margin: 6px 0; }
-
-.b-deal-list__item:first-child {
-  margin-top: 0 !important; }
-
-.b-deal-list__item table {
-  width: 100%; }
-
-.b-deal-list__item td {
-  padding: 10px;
-  vertical-align: middle; }
 
 .b-purchase .b-deal {
   width: 628px; }
@@ -2613,6 +2587,7 @@ table {
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 0;
+      text-align: center;
       background: #fff;
       border-radius: 50%;
       width: 17px;
@@ -2621,27 +2596,21 @@ table {
       display: block;
       position: absolute;
       top: -2px;
-      right: -4px;
-      text-align: center}
+      right: -4px; }
     .b-head__messages-list {
-      display: none;
-      position: absolute;
-      top: 43px;
-      right: 0;
-      z-index: 999;
-      list-style: none;
       margin: 0;
       padding: 0;
+      list-style: none;
+      display: none;
       box-sizing: border-box;
-      width: 290px;
       border: 1px solid #8b0333;
       background: #fff;
       box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
       line-height: 0; }
-      .b-head__messages-list li div {
-        display: block;
+      .b-head__messages-list li p {
         margin: 0;
-        padding: 10px;
+        padding: 10px 60px 10px 10px;
+        display: block;
         font-family: NeueHaas_reg, Helvetica, sans-serif;
         font-size: 14px;
         line-height: 1.2em;
@@ -2650,14 +2619,16 @@ table {
         text-transform: none;
         text-decoration: none;
         letter-spacing: 0; }
-        .b-head__messages-list li div b {
+        .b-head__messages-list li p b {
           font-family: NeueHaas_medium, Helvetica, sans-serif;
           font-weight: 400; }
-           .b-head__messages-list li div a {
-            color: #7fb3ff;
-           }
-        .b-head__messages-list li div:hover, .b-head__messages-list li div:focus {
+        .b-head__messages-list li p a {
+          color: #7fb3ff; }
+        .b-head__messages-list li p:hover, .b-head__messages-list li p:focus {
           background: #f4f4f4; }
+      .b-head__messages-list li.unviewed p {
+        font-family: NeueHaas_medium, Helvetica, sans-serif;
+        font-style: italic; }
   .b-head__user {
     display: block;
     float: left;
@@ -2673,7 +2644,8 @@ table {
       border-radius: 50%;
       border: 2px solid #c6c4c2;
       padding: 1px;
-      margin: 0; }
+      margin: 0;
+      background: #fff; }
     .b-head__user-name {
       float: left;
       width: 167px;
@@ -3272,30 +3244,31 @@ table {
           font-family: NeueHaas_medium, Helvetica, sans-serif;
           font-size: 18px;
           color: #8b0333; }
-      .gray_btn_style {
-        font-family: NeueHaas_medium, Helvetica, sans-serif;
-        font-size: 12px;
-        line-height: 2.8em;
-        font-weight: 400;
-        color: #464646;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 0;
-        float: right;
-        display: block;
-		text-align:center;
-        width: 153px;
-        height: 32px;
-        box-sizing: border-box;
-        padding: 0;
-        outline: none;
-        border: none;
-        background: #f7f7f7;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
-        cursor: pointer;
-        margin: -5px 10px 0 0; }
-        .b-ad-order-block__orders-info-submit:hover, .b-ad-order-block__orders-info-submit:focus {
-          box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25); }
+
+.gray_btn_style {
+  font-family: NeueHaas_medium, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 2.8em;
+  font-weight: 400;
+  color: #464646;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0;
+  text-align: center;
+  float: right;
+  display: block;
+  width: 153px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: #f7f7f7;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin: -5px 10px 0 0; }
+  .gray_btn_style:hover, .gray_btn_style:focus {
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25); }
 
 /*end of b-ad-order-block*/
 /*b-ad-unit-block*/
@@ -3519,8 +3492,7 @@ table {
     vertical-align: top;
     margin: 0 14px 11px 0; }
     .b-ad-unit-block__respond-photo img {
-      border-radius: 50%;
-    }
+      border-radius: 50%; }
     .b-ad-unit-block__respond-photo-name {
       font-family: NeueHaas_light, Helvetica, sans-serif; }
   .b-ad-unit-block__respond-name {
@@ -4055,8 +4027,8 @@ table {
       width: 57px;
       text-align: center; }
       .b-auction-public-block__buyer-photo img {
-        border-radius: 50%;
-        max-width: 100%; }
+        max-width: 100%;
+        border-radius: 50%; }
     .b-auction-public-block__buyer-btn {
       display: block;
       width: 217px;
@@ -4819,7 +4791,7 @@ table {
       margin: 14px 98px 0 15px;
       float: left; }
       .b-create-purchase-block__term-date-title {
-        margin: 0 0 14px;
+        margin: 0 0 18px;
         font-family: NeueHaas_medium, Helvetica, sans-serif;
         font-size: 14px;
         line-height: 1.2em;
@@ -4858,9 +4830,9 @@ table {
     .b-create-purchase-block__term-time {
       float: left;
       margin: 15px 0 0 0;
-      font-style: 0; }
+      font-style: normal; }
       .b-create-purchase-block__term-time-title {
-        margin: 0 0 14px;
+        margin: 0 0 18px;
         font-family: NeueHaas_medium, Helvetica, sans-serif;
         font-size: 14px;
         line-height: 1.2em;
@@ -4883,6 +4855,8 @@ table {
         width: 21px;
         height: 22px;
         margin: 0; }
+    .b-create-purchase-block__term .b-offers-request-block__table-term-minutes {
+      margin-top: 0; }
   .b-create-purchase-block__apply-term {
     margin: 24px 0 28px 4px; }
     .b-create-purchase-block__apply-term-day {
@@ -7844,7 +7818,6 @@ table {
       width: 225px; }
     .b-auction-public-block__bets--seller-in-purchase.b-auction-public-block__bets .b-auction-public-block__bets-table td:nth-child(2) {
       width: 50px;
-      /*background: none;*/
       font-family: NeueHaas_light, Helvetica, sans-serif;
       font-size: 12px;
       line-height: 1.2em;
@@ -8868,14 +8841,15 @@ table {
       height: 240px;
       box-sizing: border-box;
       border: 6px solid #ebeaea;
-      border-radius: 50%;
+      border-radius: 20%;
       font-size: 0;
       line-height: 0;
-      cursor: pointer; }
+      cursor: pointer;
+      background: #fff; }
       .b-cabinet-block__panel-img:hover {
         border: 6px solid #7FB3FF; }
       .b-cabinet-block__panel-img img {
-        border-radius: 50%;
+        border-radius: 20%;
         width: 100%;
         height: 100%; }
     .b-cabinet-block__panel-name {
@@ -10186,9 +10160,9 @@ table {
     .b-cabinet-block__finance-score {
       margin: 0 21px 13px 20px; }
       .b-cabinet-block__finance-score-sum {
-        float: left;
         margin: 0;
-        padding: 5px 7px 9px;}
+        padding: 5px 7px 9px;
+        float: left; }
       .b-cabinet-block__finance-score-add {
         float: right;
         margin: 0;
@@ -11177,7 +11151,9 @@ table {
     border-bottom: 1px solid #e1e1e1; }
   .ask__message {
     width: 748px;
-    margin: 0 auto 20px; }
+    margin: 0 0 20px 70px; }
+    .ask__message:last-child {
+      margin: 0 0 0 70px; }
     .ask__message-img {
       float: left;
       font-size: 0;
@@ -11218,7 +11194,7 @@ table {
         border: 1px solid #d7d7d7; }
   .ask__write {
     width: 748px;
-    margin: 150px auto 0; }
+    margin: 10px 0 0 70px; }
     .ask__write-textarea {
       display: block;
       width: 100%;
@@ -11258,6 +11234,9 @@ table {
         letter-spacing: 0; }
     .ask__write-submit {
       width: 152px; }
+  .ask__dialogue {
+    height: 200px;
+    overflow-y: scroll; }
 
 /*end of ask*/
 /*search-page*/
@@ -12925,6 +12904,9 @@ div.search-item h4 a {
         margin-bottom: 30px;
         color: #000;
         text-align: left; }
+    .shop__info-categories img {
+      display: inline-block;
+      vertical-align: middle; }
   .shop__logo {
     width: 150px;
     padding: 0 10px;
@@ -15575,74 +15557,298 @@ div.search-item h4 a {
   width: 230px; }
 
 /*end of piar_select*/
-.icon_navigatsiya_i_svyaz
-{
-	background: url(images/icon_leftmenu_1.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_avariyno_spasatelnye_sredstva
-{
-	background: url(images/icon_leftmenu_2.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_protivopozharnye_sredstva
-{
-	background: url(images/icon_leftmenu_3.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_sudovoe_oborudovanie
-{
-	background: url(images/icon_leftmenu_4.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_sudovaya_elektrika
-{
-	background: url(images/icon_leftmenu_5.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_korpus_i_paluba
-{
-	background: url(images/icon_leftmenu_6.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_sudovye_materialy
-{
-	background: url(images/icon_leftmenu_7.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_rybopromyslovoe_oborudovanie
-{
-	background: url(images/icon_leftmenu_8.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_gidrograficheskoe_oborudovanie
-{
-	background: url(images/icon_leftmenu_9.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_vodolaznoe_i_podvodnoe_oborudovanie
-{
-	background: url(images/icon_leftmenu_10.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_plavsredstva
-{
-	background: url(images/icon_leftmenu_11.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_uslugi_i_servis
-{
-	background: url(images/icon_leftmenu_12.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_suveniry_i_vintazh
-{
-	background: url(images/icon_leftmenu_13.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
-.icon_raznoe
-{
-	background: url(images/icon_leftmenu_14.png) 0px 0px no-repeat; 
-	background-size:cover;
-}
+/*icon*/
+.icon_navigatsiya_i_svyaz {
+  background: url(images/icon_leftmenu_1.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_avariyno_spasatelnye_sredstva {
+  background: url(images/icon_leftmenu_2.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_protivopozharnye_sredstva {
+  background: url(images/icon_leftmenu_3.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_sudovoe_oborudovanie {
+  background: url(images/icon_leftmenu_4.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_sudovaya_elektrika {
+  background: url(images/icon_leftmenu_5.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_korpus_i_paluba {
+  background: url(images/icon_leftmenu_6.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_sudovye_materialy {
+  background: url(images/icon_leftmenu_7.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_rybopromyslovoe_oborudovanie {
+  background: url(images/icon_leftmenu_8.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_gidrograficheskoe_oborudovanie {
+  background: url(images/icon_leftmenu_9.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_vodolaznoe_i_podvodnoe_oborudovanie {
+  background: url(images/icon_leftmenu_10.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_plavsredstva {
+  background: url(images/icon_leftmenu_11.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_uslugi_i_servis {
+  background: url(images/icon_leftmenu_12.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_suveniry_i_vintazh {
+  background: url(images/icon_leftmenu_13.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+.icon_raznoe {
+  background: url(images/icon_leftmenu_14.png) 0px 0px no-repeat;
+  background-size: cover; }
+
+/*end of icon*/
+/*b-deal*/
+.b-deal {
+  margin: 0 0 10px;
+  float: left;
+  width: 620px; }
+  .b-deal .pagination {
+    margin: 10px 6px 0 0; }
+  .b-deal-list {
+    width: 620px; }
+    .b-deal-list__item {
+      margin: 6px 0;
+      width: 620px;
+      background: #e8f1ff;
+      font-size: 13px; }
+      .b-deal-list__item:first-child {
+        margin-top: 0; }
+      .b-deal-list__item table {
+        width: 100%; }
+  .b-deal__table {
+    border: 1px solid #bdd2f1;
+    border-radius: 2px; }
+    .b-deal__table-logo {
+      padding: 10px;
+      width: 20px;
+      vertical-align: middle; }
+      .b-deal__table-logo a {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        color: #000;
+        text-decoration: none; }
+      .b-deal__table-logo img {
+        max-width: 100%; }
+    .b-deal__table-name {
+      padding: 10px 10px 10px 0;
+      width: 150px;
+      vertical-align: middle; }
+      .b-deal__table-name a {
+        display: block;
+        font-family: NeueHaas_reg, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: #01579b;
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0;
+        text-align: left; }
+    .b-deal__table-rating {
+      padding: 10px 10px 10px 0;
+      width: 75px;
+      vertical-align: middle;
+      font-size: 0;
+      line-height: 0; }
+      .b-deal__table-rating img {
+        margin: 0 2px 0 0;
+        display: inline-block;
+        vertical-align: baseline;
+        max-width: 13px; }
+    .b-deal__table-goods {
+      padding: 10px 10px 10px 0;
+      width: 160px;
+      vertical-align: middle;
+      font-size: 0; }
+      .b-deal__table-goods h4 {
+        margin: 0 5px 0 0;
+        display: inline-block;
+        vertical-align: baseline;
+        font-family: NeueHaas_light, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: #021d43;
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0;
+        text-align: left; }
+      .b-deal__table-goods span {
+        padding: 0 5px;
+        display: inline-block;
+        vertical-align: baseline;
+        background: #fff;
+        border-radius: 4px;
+        font-family: NeueHaas_medium, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.5em;
+        font-weight: 400;
+        color: #4e88dc;
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0;
+        text-align: center; }
+    .b-deal__table-category {
+      padding: 10px 10px 10px 0;
+      vertical-align: middle;
+      font-size: 0; }
+      .b-deal__table-category h4 {
+        margin: 0 5px 0 0;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: NeueHaas_light, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: #021d43;
+        text-transform: none;
+        text-decoration: none;
+        letter-spacing: 0;
+        text-align: left; }
+      .b-deal__table-category-list {
+        padding: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 4px;
+        background: #fff;
+        font-size: 0;
+        line-height: 0; }
+      .b-deal__table-category img {
+        margin: 0 5px 0 0;
+        display: inline-block;
+        vertical-align: middle; }
+        .b-deal__table-category img:last-child {
+          margin: 0; }
+
+/*end of b-deal*/
+/*notice-good*/
+.shop-ad {
+  margin: 0 0 10px;
+  padding: 15px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #719bd9;
+  border-radius: 1px;
+  background: #fff;
+  width: 180px; }
+  .shop-ad__info {
+    margin: 0 0 10px; }
+  .shop-ad__logo {
+    padding: 0 10px 0 0;
+    display: table-cell;
+    vertical-align: top;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none; }
+    .shop-ad__logo img {
+      max-width: 45px;
+      border-radius: 5px; }
+  .shop-ad__title {
+    margin: 0 0 5px;
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    font-size: 0;
+    line-height: 0; }
+    .shop-ad__title a {
+      margin: 0 5px 0 0;
+      display: inline-block;
+      vertical-align: top;
+      font-family: NeueHaas_reg, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.2em;
+      font-weight: 400;
+      color: #01579b;
+      text-transform: none;
+      text-decoration: none;
+      letter-spacing: 0;
+      text-align: left; }
+  .shop-ad__rating {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0; }
+    .shop-ad__rating img {
+      margin: 0 2px 0 0;
+      display: inline-block;
+      vertical-align: baseline;
+      max-width: 13px; }
+  .shop-ad__goods {
+    margin: 0 0 10px;
+    font-size: 0; }
+    .shop-ad__goods h4 {
+      margin: 0;
+      display: inline-block;
+      vertical-align: baseline;
+      font-family: NeueHaas_light, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.2em;
+      font-weight: 400;
+      color: #3d4a79;
+      text-transform: none;
+      text-decoration: none;
+      letter-spacing: 0;
+      text-align: left; }
+    .shop-ad__goods span {
+      padding: 0 5px;
+      display: inline-block;
+      vertical-align: baseline;
+      background: #fff;
+      border-radius: 4px;
+      font-family: NeueHaas_medium, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 400;
+      color: #4e88dc;
+      text-transform: none;
+      text-decoration: none;
+      letter-spacing: 0;
+      text-align: center; }
+  .shop-ad__category {
+    margin: 0;
+    font-size: 0; }
+    .shop-ad__category h4 {
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: NeueHaas_light, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.2em;
+      font-weight: 400;
+      color: #3d4a79;
+      text-transform: none;
+      text-decoration: none;
+      letter-spacing: 0;
+      text-align: left; }
+    .shop-ad__category img {
+      padding: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 20px;
+      background: #fff; }
+      .shop-ad__category img:first-of-type {
+        border-radius: 4px 0 0 4px; }
+      .shop-ad__category img:last-of-type {
+        border-radius: 0 4px 4px 0; }
+
+/*end of b-notice-goods*/
 /*end of PAGE-STYLES*/
