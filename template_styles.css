@@ -106,7 +106,7 @@ table {
 
 .g-rub {
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 18px;
   font-family: NeueHaas_medium, Helvetica, sans-serif; }
 
 /*------------search on not main pages and breadcrums----------------------*/
@@ -563,7 +563,7 @@ table {
   text-align: center;
   top: 70px;
   right: 0;
-  font-size: 22px;
+  font-size: 18px;
   font-family: NeueHaas_medium, Helvetica, sans-serif; }
 
 .b-offer__more {
@@ -7613,7 +7613,7 @@ table {
       border-bottom: 1px solid #ededed; }
       .b-stores-block__table tr:first-child, .b-stores-block__table tr:last-child {
         border: none; }
-      .b-stores-block__table tr.colored {
+      .b-stores-block__table tr.colored, .announce-table tr.colored {
         background: #f1c43d; }
       .b-stores-block__table tr.circled {
         background: #f1c43d;
@@ -13508,6 +13508,9 @@ div.search-item h4 a {
     border: 1px solid #f6f6f6;
     margin: 0 0 8px;
     overflow: hidden; }
+    .open-shop__logo_container img {
+      max-width: 100%;
+    }
   .open-shop__chars-counter {
     font-size: 11px;
     color: #c3c3c3; }
